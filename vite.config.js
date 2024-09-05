@@ -28,6 +28,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,PNG}'],
+        maximumFileSizeToCacheInBytes: 3 * 1024 * 1024, // 3 MB
       },
     }),
   ],
@@ -37,4 +38,7 @@ export default defineConfig({
     },
   },
   assetsInclude: ['**/*.PNG'],
+  build: {
+    chunkSizeWarningLimit: 1000, // Increase chunk size warning limit to 1000 kB
+  },
 })
