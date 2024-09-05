@@ -60,7 +60,7 @@ const projects = ref([
     id: 3,
     title: 'Parlay Cleveland',
     description: 'A community-driven platform connecting local entrepreneurs and fostering innovation.',
-    image: '#',
+    image: 'parlaylogo.png',
     link: 'https://parlaycleveland.com/'
   }
 ])

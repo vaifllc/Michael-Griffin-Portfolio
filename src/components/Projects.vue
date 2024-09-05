@@ -57,7 +57,7 @@ const projects = ref([
     technologies: ['React Native Expo', 'Express.js', 'Node.js', 'MongoDB', 'Typescript', 'AWS S3'],
     link: 'https://www.blumrelocations.com/',
     role: 'Full Stack Developer',
-    duration: 'Mar 2021 - Dec 2021',
+    duration: 'Sept 2023 - March 2024',
     keyFeatures: [
       'Automated moving task generation system based on response given in questionnaire.',
       'Automated budget tracker system.',
@@ -71,19 +71,19 @@ const projects = ref([
   {
     id: 3,
     title: 'Parlay Cleveland',
-    description: 'A community-driven platform connecting local entrepreneurs and fostering innovation.',
+    description: 'A website created for a sports bar in Cleveland.',
     image: null, // We'll set this to a placeholder if no image is available
     technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-    link: 'https://example.com/parlay-cleveland',
+    link: 'https://parlaycleveland.com/',
     role: 'Frontend Developer',
-    duration: 'Sep 2020 - Feb 2021',
+    duration: 'Sep 2023 - Sep 2023',
     keyFeatures: [
-      'Event management and ticketing system',
-      'Networking features for entrepreneurs',
-      'Resource sharing and collaboration tools'
+      'Gallery Page',
+      '360 Tour',
+      'Events Booking'
     ],
-        testFlightLink: 'https://testflight.apple.com/join/yourAppId',
-    androidTestLink: 'https://play.google.com/apps/testing/com.yourapp'
+        testFlightLink: null,
+    androidTestLink: null
   }
 ])
 
@@ -95,6 +95,6 @@ onMounted(async () => {
   // Dynamically import images
   projects.value[0].image = (await import('../assets/icon.png')).default
   projects.value[1].image = (await import('../assets/BlumShowcase.png')).default
-  projects.value[2].image = 'https://via.placeholder.com/300' // Placeholder for missing image
+  projects.value[2].image = '../assets/parlaylogo.png' // Placeholder for missing image
 })
 </script>

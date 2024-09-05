@@ -163,7 +163,7 @@ const projects = [
     ],
     link: 'https://www.blumrelocations.com/',
     role: 'Full Stack Developer',
-    duration: 'Mar 2021 - Dec 2021',
+    duration: 'Sep 2023 - March 2024',
     client: 'Blüm Relocations',
     keyFeatures: [
       'Automated moving task generation system based on response given in questionnaire.',
@@ -185,7 +185,7 @@ const projects = [
       { name: 'Firebase', icon: 'logos:firebase' },
       { name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' }
     ],
-    link: 'https://example.com/parlay-cleveland',
+    link: 'https://parlaycleveland.com/',
     role: 'Frontend Developer',
     duration: 'Sep 2020 - Feb 2021',
     client: 'Parlay Cleveland',
@@ -194,8 +194,8 @@ const projects = [
       'Networking features for entrepreneurs',
       'Resource sharing and collaboration tools'
     ],
-    testFlightLink: 'https://testflight.apple.com/join/yourAppId',
-    androidTestLink: 'https://play.google.com/apps/testing/com.yourapp'
+    testFlightLink: null,
+    androidTestLink: null
   }
 ];
 

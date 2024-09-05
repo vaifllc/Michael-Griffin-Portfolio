@@ -9,12 +9,12 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { registerSW } from 'virtual:pwa-register'
 
-// Lazy load components
-const Home = () => import('./components/Home.vue')
-const About = () => import('./components/About.vue')
-const Projects = () => import('./components/Projects.vue')
-const Contact = () => import('./components/Contact.vue')
-const ProjectDetails = () => import('./components/ProjectDetails.vue')
+// Import your components here
+import Home from './components/Home.vue'
+import About from './components/About.vue'
+import Projects from './components/Projects.vue'
+import Contact from './components/Contact.vue'
+import ProjectDetails from './components/ProjectDetails.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -50,12 +50,10 @@ app.use(Toast)
 // Register service worker
 const updateSW = registerSW({
   onNeedRefresh() {
-    // Show a prompt to the user to refresh the app
     console.log('New content available, please refresh.')
     // You can implement a user prompt here if desired
   },
   onOfflineReady() {
-    // Notify the user that the app is ready for offline use
     console.log('App is ready for offline use.')
     // You can show a toast notification here if desired
   },

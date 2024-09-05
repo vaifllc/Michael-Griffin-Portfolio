@@ -111,9 +111,9 @@ const siteTechnologies = [
   { name: 'Animations: GSAP and Vue Motion', icon: 'mdi:animation' },
   { name: 'Icons: Iconify for vector icons', icon: 'mdi:svg' },
   { name: 'Routing: Vue Router for navigation', icon: 'mdi:routes' },
-  { name: 'State Management: Vuex (if applicable)', icon: 'mdi:state-machine' },
+  { name: 'State Management: Vuex ', icon: 'mdi:state-machine' },
   { name: 'Build Tool: Vite for fast development', icon: 'mdi:lightning-bolt' },
-  { name: 'Deployment: [Your deployment platform]', icon: 'mdi:cloud-upload' },
+  { name: 'Deployment: Netifly', icon: 'mdi:cloud-upload' },
 ]
 
 const props = defineProps({
