@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
+import path from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
@@ -27,13 +27,14 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-      },
-      devOptions: {
-        enabled: true,
-        type: 'module',
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,PNG}'],
       },
     }),
   ],
-  assetsInclude: ['**/*.PNG', '**/*.png'], // Add both uppercase and lowercase extensions
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+  assetsInclude: ['**/*.PNG'],
 })

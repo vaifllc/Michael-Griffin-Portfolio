@@ -120,6 +120,8 @@ const route = useRoute();
 const project = ref(null);
 const swiperModules = [Navigation, Pagination, EffectCoverflow];
 const fullscreenImage = ref(null);
+// Import all png images from the assets folder
+const images = import.meta.glob(['../assets/**/*.png', '../assets/**/*.PNG'], { eager: true });
 
 const projects = [
   {
@@ -212,26 +214,17 @@ onMounted(async () => {
   project.value = projects.find(p => p.id === projectId);
 
   if (project.value) {
-    // Dynamically import images for the gallery
     if (project.value.id === 1) {
       project.value.gallery = [
-        (await import('../assets/icon.png')).default,
-        (await import('../assets/Align/1.png')).default,
-        (await import('../assets/Align/2.png')).default,
-        (await import('../assets/Align/3.png')).default,
-        (await import('../assets/Align/4.png')).default,
-        (await import('../assets/Align/5.png')).default,
-        (await import('../assets/Align/6.png')).default,
-        (await import('../assets/Align/7.png')).default,
-        (await import('../assets/Align/8.png')).default,
-        (await import('../assets/Align/9.png')).default,
-        (await import('../assets/Align/10.png')).default,
-        (await import('../assets/Align/11.png')).default,
-        (await import('../assets/Align/12.png')).default,
+        images['../assets/icon.png'].default,
+        ...Array.from({ length: 12 }, (_, i) => {
+          const key = Object.keys(images).find(path => path.toLowerCase().includes(`align/${i + 1}.png`));
+          return key ? images[key].default : 'https://via.placeholder.com/300';
+        })
       ];
     } else if (project.value.id === 2) {
       project.value.gallery = [
-        (await import('../assets/BlumShowcase.png')).default,
+        images['../assets/BlumShowcase.png'].default,
         // ... other Blüm images ...
       ];
     } else {
